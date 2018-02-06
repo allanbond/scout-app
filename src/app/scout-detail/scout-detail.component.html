@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-title>{{ (scout$ | async)?.firstName }} {{ (scout$ | async)?.lastName }}</mat-card-title>
+  <mat-card-subtitle><span>Current Rank - {{ (scout$ | async)?.rank }}</span></mat-card-subtitle>
+  <mat-card-content>
+    <tsa-advancement-list></tsa-advancement-list>
+  </mat-card-content>
+</mat-card>

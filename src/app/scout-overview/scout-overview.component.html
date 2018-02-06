@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-title>{{ scout.firstName }} {{ scout.lastName }}</mat-card-title>
+  <mat-card-subtitle>{{ rank }}</mat-card-subtitle>
+  <mat-card-content>
+    <div *ngFor="let aRank of ranks" class="tsa-rank" [ngStyle]="{'background-color': aRank.color}">{{ aRank.label }}</div>
+  </mat-card-content>
+</mat-card>

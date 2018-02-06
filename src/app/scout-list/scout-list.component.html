@@ -1,0 +1,12 @@
+<h2 class="mat-title">Scouts</h2>
+<mat-nav-list role="list">
+  <ng-container *ngFor="let scout of scouts$ | async; last as isLast">
+    <a mat-list-item [routerLink]="['/scouts', scout.id]" role="listitem">
+      <!-- <mat-icon matListIcon>person</mat-icon> -->
+      <tsa-avatar matListAvatar [color]="scout.color" [name]="scout.firstName + ' ' + scout.lastName"></tsa-avatar>
+      <div matLine>{{ scout.firstName }} {{ scout.lastName }}</div>
+      <div matLine>{{ scout.rank }}</div>
+    </a>
+    <mat-divider *ngIf="!isLast"></mat-divider>
+  </ng-container>
+</mat-nav-list>

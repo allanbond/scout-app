@@ -1,0 +1,10 @@
+<div [ngStyle]="{'background-color': color}">
+  <ng-container *ngIf="imgUrl; else showInitials">
+    <img [src]="imgUrl"/>
+  </ng-container>
+  <ng-template #showInitials>
+    <span>
+        {{ initials }}
+    </span>
+  </ng-template>
+</div>
